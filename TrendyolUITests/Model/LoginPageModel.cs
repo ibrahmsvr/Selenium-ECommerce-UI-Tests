@@ -28,12 +28,20 @@ namespace TrendyolUITests.Model
 
         public string GetTextMessage()
         {
+            IsElementVisible(lblMessage, 5);
             return GetText(lblMessage);
         }
 
         public void ClickLoginButton()
         {
             ClickElement(btnLogin);
+        }
+
+        public bool CheckMyAccountLinkIsVisible()
+        {
+            WaitSeconds(3);
+            string text = GetText(lnkMyAccount); //Hesabım olmalı
+            return IsElementVisible(lnkMyAccount, 20);          
         }
     }
 }

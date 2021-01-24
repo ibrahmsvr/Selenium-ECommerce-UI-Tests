@@ -13,7 +13,10 @@ namespace TrendyolUITests.Constants
     {
         public static IWebDriver webDriver;
         public static Browser browser = new Browser();
-        public static LoginPageModel loginPageModel; 
+        public static LoginPageModel loginPageModel;
+
+        //Ana sayfada, GÜNCELLE
+        public static By lnkMyAccount = By.XPath("//*[@class='link account-user']/p");
 
         public static By txtEmail = By.Id("login-email");
         public static By txtPassword = By.Id("login-password-input");

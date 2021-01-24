@@ -64,5 +64,25 @@ namespace TrendyolUITests.Base
         {
             return FindElement(by).Text;
         }
+
+        public bool IsElementVisible(By by, int waitSec)
+        {
+            IWebElement element = null;
+            bool isTrue = false;
+            DateTime now = DateTime.Now;
+            while ((DateTime.Now.Second - now.Second)< waitSec)
+            {
+                element = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(by));
+
+                //Check if element visible
+                if (!element.Equals(null))
+                {
+                    isTrue = true;
+                    break;
+                }
+            }
+
+            return isTrue;
+        }
     }
 }

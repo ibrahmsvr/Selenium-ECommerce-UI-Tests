@@ -42,17 +42,24 @@ namespace TrendyolUITests.Test
         }
 
         [StepDefinition(@"Giris yap butonuna tiklanir")]
-        public void GivenGirisYapButonunaTiklanir()
+        public void ClickLoginButton()
         {
             loginPageModel.ClickLoginButton();
         }
 
 
         [StepDefinition(@"'(.*)' mesaji gorulerek test basarili sonuclanir")]
-        public void GivenMesajiGorulerekTestBasariliSonuclanir(string expectedResult)
+        public void CheckErrorMessage(string expectedResult)
         {
             Assert.AreEqual(expectedResult, loginPageModel.GetTextMessage(), "Hata mesajı yok");
         }
+
+        [StepDefinition(@"Hesabim geldigi gorulur ve test basarili sonuclanir")]
+        public void CheckMyAccountLinkIsVisible()
+        {
+            Assert.IsTrue(loginPageModel.CheckMyAccountLinkIsVisible(), "Hesaba giriş yapılamadı");
+        }
+
 
         [AfterScenario]
         public void TearDown()
