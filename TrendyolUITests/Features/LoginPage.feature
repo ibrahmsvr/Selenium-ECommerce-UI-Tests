@@ -1,7 +1,6 @@
 ﻿Feature: LoginPage
-	Simple calculator for adding two numbers
+	It is testing Trendyol Login Page
 
-@mytag
 Scenario: LoginWithWrongEmailAndPassword
 	* 'https://www.trendyol.com/giris' sayfasi acilir
 	* E-Posta alanina 'deneme' girilir
