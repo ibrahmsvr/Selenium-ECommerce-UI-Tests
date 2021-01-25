@@ -99,6 +99,7 @@
     <None Include="Features\LoginPage.feature">
       <LastGenOutput>LoginPage.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\MainPage.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
